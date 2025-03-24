@@ -26,7 +26,7 @@ const App = () => {
             <div>
                 {loading ? (
                     <div className="loader-container">
-                        <img src="/images/technophilia-logo.png" alt="Logo" className="logo-blink" />
+                        <img src="/images/technophilia logo.png" alt="Logo" className="logo-blink" />
                     </div>
                 ) : (
                     <div className="landing-page">
