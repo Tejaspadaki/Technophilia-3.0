@@ -9,7 +9,7 @@ const About = () => {
                 <p>From  coding challenges, and tech quizzes to design battles, business strategy games, and fun-filled interactive sessions, Technophilia 3.0 is a celebration of skills, knowledge, and collaboration. Whether you're a tech geek eager to push boundaries or a creative thinker looking for an engaging experience, this is the platform to showcase your talent.</p>
                 <p>Join us and be part of an electrifying journey where innovation meets excitement. Let’s learn, compete, and create the future—together!</p>
             </div>
-            <img src="/images/about-image.jpg" alt="About Us" data-aos="fade-left"/>
+            <img src="/images/IMG_4536.jpg" alt="About Us" data-aos="fade-left"/>
         </section>
     );
 };

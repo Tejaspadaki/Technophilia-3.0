@@ -141,8 +141,15 @@ body {
 .about-text {
   width: 50%;
   padding: 20px;
+  color: white;
+}
+.about-text h2{
+  width: 50%;
+  padding: 20px;
   color: #00f5d4;
 }
+
+
 .about img {
   width: 40%;
   border-radius: 10px;
@@ -417,6 +424,7 @@ body {
   /* General Styles */
   body {
     font-size: 14px;
+    overflow-x: hidden;
   }
 
   /* Navbar */
