@@ -156,55 +156,184 @@ body {
   box-shadow: 0px 4px 10px rgba(255, 0, 110, 0.3);
 }
 
-/* Event Schedule */
+/* Event Schedule Section */
 .schedule {
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #1a1a2e, #000212);
+  background: linear-gradient(135deg, #000212, #1a1a2e);
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(255, 0, 110, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 245, 212, 0.2);
+  color: #fff;
+  overflow: hidden;
 }
+
+/* Title */
+.schedule h2 {
+  font-size: 2.5rem;
+  color: #00f5d4;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px rgba(0, 245, 212, 0.8);
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* Timeline Container */
 .timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
+
+/* Glowing Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  background: linear-gradient(180deg, #00f5d4, #ff006e);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* Timeline Item */
 .timeline-item {
   display: flex;
   align-items: center;
-  width: 80%;
+  justify-content: flex-end;
+  width: 50%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeInUp 1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Alternate Alignment for Zig-Zag Effect */
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+  justify-content: flex-start;
+}
+
+/* Glowing Dots */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #00f5d4;
+  border-radius: 50%;
+  top: 30px;
+  right: -10px;
+  box-shadow: 0px 0px 10px rgba(0, 245, 212, 0.7);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Alternate Dot Colors */
+.timeline-item:nth-child(even)::before {
+  left: -10px;
+  right: auto;
+  background: #ff006e;
+  box-shadow: 0px 0px 10px rgba(255, 0, 110, 0.7);
+}
+
+/* Timeline Content Box */
+.timeline-content {
   background: rgba(255, 255, 255, 0.1);
-  margin: 15px 0;
-  padding: 15px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 245, 212, 0.3);
+  width: 85%;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
   position: relative;
   transition: transform 0.3s ease-in-out;
 }
-.timeline-item:hover {
+
+/* Hover Effect */
+.timeline-content:hover {
   transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 245, 212, 0.5);
 }
+
+/* Timeline Time */
 .timeline-date {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
-  width: 120px;
-  text-align: center;
-  background:  #00f5d4;
-  padding: 10px;
-  border-radius: 5px;
-  color: black;
+  color: #00f5d4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
-.timeline-content {
-  margin-left: 20px;
-  text-align: left;
-  color: #ddd;
-}
+
+/* Event Name */
 .timeline-content h3 {
-  margin: 0;
-  color: #ff006e;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
+
+/* Location */
 .timeline-content p {
-  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #ddd;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0px 0px 10px rgba(0, 245, 212, 0.7);
+  }
+  to {
+    box-shadow: 0px 0px 20px rgba(255, 0, 110, 0.8);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .timeline {
+    width: 100%;
+  }
+
+  .timeline-item {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 30px;
+    text-align: center;
+  }
+
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  .timeline-item::before {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    width: 90%;
+  }
+
+  .timeline::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Upcoming Events */

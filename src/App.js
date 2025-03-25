@@ -8,7 +8,6 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Schedule from "./components/Schedule";
 import Events from "./components/Events";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Countdown from "./components/Countdown";
 import EventPage from "./components/EventPage";
@@ -40,7 +39,6 @@ const App = () => {
                                     <Schedule />
                                     <Countdown />
                                     <Events />
-                                    <Contact />
                                 </>
                             } />
 
