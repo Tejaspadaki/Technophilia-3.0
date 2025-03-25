@@ -35,10 +35,10 @@ const App = () => {
                             {/* Home Page */}
                             <Route path="/" element={
                                 <>
-                                    <Countdown />
                                     <Hero />
                                     <About />
                                     <Schedule />
+                                    <Countdown />
                                     <Events />
                                     <Contact />
                                 </>
