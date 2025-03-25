@@ -32,6 +32,7 @@ const App = () => {
                     <div className="landing-page">
                         <Navbar />
                         <Routes>
+                            {/* Home Page */}
                             <Route path="/" element={
                                 <>
                                     <Countdown />
@@ -42,9 +43,9 @@ const App = () => {
                                     <Contact />
                                 </>
                             } />
-                            {[...Array(12)].map((_, index) => (
-                                <Route key={index} path={`/events/event${index + 1}`} element={<EventPage eventId={index + 1} />} />
-                            ))}
+
+                            {/* Event Details Page (Dynamic Route) */}
+                            <Route path="/events/:eventId" element={<EventPage />} />
                         </Routes>
                         <Footer />
                     </div>
