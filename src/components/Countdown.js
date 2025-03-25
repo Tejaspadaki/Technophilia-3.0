@@ -25,7 +25,7 @@ const Countdown = () => {
     }, []);
 
     return (
-        <section className="countdown">
+        <section className="countdown" data-aos="fade-up" >
             <h2>Countdown to Technophilia 3.0</h2>
             <div className="countdown-timer">
                 {Object.entries(timeLeft).map(([unit, value]) => (
