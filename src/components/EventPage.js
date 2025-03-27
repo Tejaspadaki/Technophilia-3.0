@@ -116,7 +116,7 @@ const eventDetails = [
         venue: "A Block – Ground Floor.",
         time: "1.30 pm",
         levels: "Beginner to Advanced",
-        contact: "John Doe - +91 9876543210",
+        contact: "Disha shinde-8767240454",
         highlights: ["Solve puzzles & decode clues", "Explore the campus and unlock hidden locations", "Team-based competition with thrilling twists", "Learn, compete, and win exciting rewards!"]
     },
     {
