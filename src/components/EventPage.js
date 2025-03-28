@@ -19,7 +19,7 @@ const eventDetails = [
         id: 2,
         name: "WebReVise",
         tag: "Revise, Refine, Reimagine!",
-        entryFee: ": ₹50 for each person",
+        entryFee: ": ₹50 per Team",
         prizes: "Prizes & Certificates for Winners!",
         date: "4th April 2025",
         venue: "ADB Lab , B Block – 3rd Floor ",
